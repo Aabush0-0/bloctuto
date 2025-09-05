@@ -1,7 +1,13 @@
 import 'package:Bloc/screens/post_page.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'core/networks/app_keys.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await AppKeys.load();
+
   runApp(const MyApp());
 }
 
